@@ -8,38 +8,36 @@ work on jetson_nano
 
 ## 2. 交叉编译 RT 内核并烧录
 
-参考 [论坛指南]https://chipnbits.github.io/content/projects/RLUnicycle/rtkernel/rtpatch.html)
+参考 [论坛指南](https://chipnbits.github.io/content/projects/RLUnicycle/rtkernel/rtpatch.html)
 
-```
-~~
-在 `make -j4` 之前，修改以下文件：
 
-**`scripts/dtc/dtc-lexer.lex.c_shipped`**，找到：
+~~在 make -j4之前，修改以下文件：~~
+
+~~**`scripts/dtc/dtc-lexer.lex.c_shipped`**，找到：~~
 ```c
 YYLTYPE yylloc;
 ```
-修改为：
+~~修改为：~~
 ```c
 extern YYLTYPE yylloc;
 ```
 
-**`Kbuild.include`**，找到：
-```make
-the-space :=
-the-space +=
-```
-修改为：
+~~**`Kbuild.include`**，找到：~~
+~~```make~~
+~~the-space :=~~
+~~the-space +=~~
+
+~~修改为：~~
 ```make
 E =
 the-space = $E $E
 ```
 
-`j4` 修改为 `j16`：
-```
+~~`j4` 修改为 `j16`：~~
+
 
 其他步骤严格按照参考博客进行。
-以上方案问题很大，在安装完后发现不明原因会开不了机
-~~
+~~以上方案问题很大，在安装完后发现不明原因会开不了机~~
 
 
 
