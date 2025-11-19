@@ -8,10 +8,10 @@ work on jetson_nano
 
 ## 2. 交叉编译 RT 内核并烧录
 
-参考 [NVIDIA 论坛指南](https://forums.developer.nvidia.com/t/applying-a-preempt-rt-patch-to-jetpack-4-5-on-jetson-nano/168428/4) 和英伟达官方文档。
+参考 [论坛指南]https://chipnbits.github.io/content/projects/RLUnicycle/rtkernel/rtpatch.html)
 
 ```
-
+~~
 在 `make -j4` 之前，修改以下文件：
 
 **`scripts/dtc/dtc-lexer.lex.c_shipped`**，找到：
@@ -39,6 +39,7 @@ the-space = $E $E
 
 其他步骤严格按照参考博客进行。
 以上方案问题很大，在安装完后发现不明原因会开不了机
+~~
 
 
 
